@@ -13,7 +13,7 @@ with open("score_list.txt", "r") as score_file:
     ordered_score_list = sorted(score_list, key=itemgetter("attempts"))
 
     for score_dict in ordered_score_list[:3]:
-        print(f'The user {score_dict["user"]} has needed {score_dict["attempts"]} attempts, the wrong guesses were {score_dict["wrong_guesses"]}, the solution was number {score_dict["solution"]} date: {score_dict.get("date")}')
+        print(f'The user {score_dict.get("user")} has needed {score_dict.get("attempts")} attempts, the wrong guesses were {score_dict.get("wrong_guesses")}, the solution was number {score_dict.get("solution")} date: {score_dict.get("date")}')
 
 wrong_guesses_list = []
 
